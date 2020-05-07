@@ -45,6 +45,9 @@ pd.crosstab(df.L,df.T,margins=True)
 
 (T was true where L was false in 35 cases) 
 df = df.sort_values(by=['...', '...'], ascending=[True, False]) # Sorted True value with False value in the other column in my case
+
+boollista = (df.L == 'P') & (df.T == 'No P') # another solution for sorting
+df = df[boollista]
 df_d = df_d[0:35]
 
 df_d.to_csv('D:...\name', sep=',')
