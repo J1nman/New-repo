@@ -33,9 +33,9 @@ m.drawcoastlines() #creates a map
 for name, row in routes[:3000].iterrows():
 if abs(row["source_lon"] - row["dest_lon"]) < 90:      
 # Draw a great circle between source and dest airports.
-m.drawgreatcircle(             # Here the problem starts. I mark everything and run it but get the error below. 
-row["source_lon"],             # m.drawgreatcircle(
-row["source_lat"],             #                   ^ expected an indented block
+    m.drawgreatcircle(             # fixed error. Needed 4 spaces here. 
+row["source_lon"],             
+row["source_lat"],             
 row["dest_lon"],
 row["dest_lat"],
 linewidth=1,
