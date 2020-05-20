@@ -1,0 +1,4 @@
+.idea/
+.git/
+netflix.py
+data/netflix_titles.csv
