@@ -1,0 +1,24 @@
+import os
+import pandas as pd
+
+path = 'D:/python/df_multi.pkl' # Where I saved the files with the filenames
+path_kiuas = 'D:/python/PNI_to_Cyto.txt'
+
+df = pd.read_pickle(path) # Creates a Dataframe with the filenames
+df_c = pd.read_csv(path_kiuas)
+type(df_c)
+
+file_name = df.filename 
+file_name
+len(file_name)
+
+file_name2 = df_c['total 26216472'] #file_name2 is full with info, just want the filenames.
+len(file_name2)
+
+list = [x.split(":")[1] for x in file_name2] # Found a place where I can split all rows equally close to the filenames.
+list = [x[3:] for x in list] # Splits the last 3 steps on left side
+complete_list = [x.rsplit(".", 1)[0] for x in list] # Splits the last dot and keeps the filenames as I want.
+complete_list # To check so everything looks fine.
+
+is_in_all = set(file_name).intersection(set(complete_list)) 
+len(file_name) == len(is_in_all)
