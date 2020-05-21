@@ -28,7 +28,7 @@ df_a = df_a[df_a['type'] != 'TV Show']
 
 # NOTE: Fel. Alla regisörer är inte med från df_director. Kolla ALLTID att koden du kör ger de
 # resultat du förväntar dig. Jag gör alltid det också (efter 7 år) annars blir det ofta fel.
-# len(df_a.director.unique())
+# len(df_a.director.unique()) == len(df_director.director.unique())
 
 
 # Skapa en motsvarande DF med alla regisörer i df_movies som börjar på bokstaven A i förnamn. Kalla den df_b.
