@@ -19,8 +19,7 @@ df_movies['director'].nunique()
 # flera rader per regisor). Tips: kolla att antal unika regisörer är samma som i df_director.
 
 df_dir = df_director[['director', 'title']]
-del df_movies['age']
-df_dir = pd.merge(df_dir, df_movies)
+
 df_dirmov = df_dir.dropna()
 
 
