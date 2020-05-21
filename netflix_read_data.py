@@ -20,6 +20,6 @@ df_movies['director'].nunique()
 
 df_dir = df_director[['director', 'title']]
 
-df_dirmov = df_dir.dropna()
+df_director_update = df_dir.dropna()
 
 
