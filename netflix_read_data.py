@@ -66,3 +66,8 @@ pd.concat([df_b, df_c]).drop_duplicates(keep=False)
 print(2732 + 241)
 
 # Funkar! :)
+
+# Med df_a, behåll enbart den film som har högst rating per regisör.
+
+
+# Med df_a, skapa en ny DF som har en kolumn medelvärde av rating per regisör (dvs en rad per regisör).
